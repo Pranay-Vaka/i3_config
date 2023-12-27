@@ -1,0 +1,13 @@
+{
+  "border": "normal",
+  "floating": "auto_on",
+  "swallows": [
+    {
+      "command": "bash"
+    }
+  ],
+  "layout": "splitv",
+  "percent": 0.9,
+  "orientation": "vertical",
+  "type": "con"
+}
