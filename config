@@ -167,15 +167,15 @@ bindsym XF86AudioNext exec playerctl play-next
 bindsym XF86AudioPrev exec playerctl previous
 bindsym $mod+r mode "resize"
 
-# # Scratchpad that runs python for arithmefic
-# for_window [class = "python_scratchpad"] floating enable
-# for_window [class = "python_scratchpad"] resize set 800 600
-# for_window [class = "python_scratchpad"] move scratchpad
-# for_window [class = "python_scratchpad"] border pixel 5
-# exec_always --no-startup-id ~/.config/i3/scripts/launch_python_scratchpad.sh
-# # exec_always --no-startup-id $terminal --class python_scratchpad -e python
-#
-# bindsym $mod+p [class = "python_scratchpad"] scratchpad show; [class = "python_scratchpad"] move position center
+# Scratchpad that runs python for arithmefic
+for_window [class = "python_scratchpad"] floating enable
+for_window [class = "python_scratchpad"] resize set 800 600
+for_window [class = "python_scratchpad"] move scratchpad
+for_window [class = "python_scratchpad"] border pixel 5
+exec_always --no-startup-id ~/.config/i3/scripts/launch_python_scratchpad.sh
+# exec_always --no-startup-id $terminal --class python_scratchpad -e python
+
+bindsym $mod+p [class = "python_scratchpad"] scratchpad show; [class = "python_scratchpad"] move position center
 
 # Scratchpad that runs music
 for_window [class = "music"] floating enable
