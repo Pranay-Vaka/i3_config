@@ -66,17 +66,17 @@ bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
 
 # split in horizontal orientation
-bindsym $mod+Shift+\ split h
-bindsym $mod+Shift+| split h
+bindsym $mod+shift+bar split h
+bindsym $mod+shift+backslash split h
 
 # split in vertical orientation
-bindsym $mod+Shift+- split v
+bindsym $mod+shift+dash split v
 
 # bindings for resizing the window
-bindsym $mod+shift+down resize shrink width $resize_px_size px or $resize_ppt_size ppt
-bindsym $mod+shift+up resize grow width $resize_px_size px or $resize_ppt_size ppt
-bindsym $mod+shift+left resize shrink width $resize_px_size px or $resize_ppt_size ppt
-bindsym $mod+shift+right resize grow width $resize_px_size px or $resize_ppt_size ppt
+# bindsym $mod+shift+down resize shrink width $resize_px_size px or $resize_ppt_size ppt
+# bindsym $mod+shift+up resize grow width $resize_px_size px or $resize_ppt_size ppt
+# bindsym $mod+shift+left resize shrink width $resize_px_size px or $resize_ppt_size ppt
+# bindsym $mod+shift+right resize grow width $resize_px_size px or $resize_ppt_size ppt
 
 # open shutter
 bindsym $mod+Shift+s exec shutter
@@ -167,15 +167,15 @@ bindsym XF86AudioNext exec playerctl play-next
 bindsym XF86AudioPrev exec playerctl previous
 bindsym $mod+r mode "resize"
 
-# Scratchpad that runs python for arithmetic
-for_window [class = "python_scratchpad"] floating enable
-for_window [class = "python_scratchpad"] resize set 800 600
-for_window [class = "python_scratchpad"] move scratchpad
-for_window [class = "python_scratchpad"] border pixel 5
-exec_always --no-startup-id ~/.config/i3/scripts/launch_python_scratchpad.sh
-# exec_always --no-startup-id $terminal --class python_scratchpad -e python
-
-bindsym $mod+p [class = "python_scratchpad"] scratchpad show; [class = "python_scratchpad"] move position center
+# # Scratchpad that runs python for arithmefic
+# for_window [class = "python_scratchpad"] floating enable
+# for_window [class = "python_scratchpad"] resize set 800 600
+# for_window [class = "python_scratchpad"] move scratchpad
+# for_window [class = "python_scratchpad"] border pixel 5
+# exec_always --no-startup-id ~/.config/i3/scripts/launch_python_scratchpad.sh
+# # exec_always --no-startup-id $terminal --class python_scratchpad -e python
+#
+# bindsym $mod+p [class = "python_scratchpad"] scratchpad show; [class = "python_scratchpad"] move position center
 
 # Scratchpad that runs music
 for_window [class = "music"] floating enable
@@ -234,7 +234,7 @@ for_window [title="video0 - mpv"] sticky enable
 bindsym $mod+c exec --no-startup-id camtoggle.sh
 
 # Execute on power up
-exec_always brightnessctl s 25%
+exec_always brightnessctl s 20%
 exec_always picom -b
 exec_always setxkbmap gb
 exec_always feh --bg-scale /home/pranay/Pictures/summer_wallpaper.jpg
