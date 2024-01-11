@@ -51,6 +51,7 @@ bindsym $mod+q kill
 
 # start dmenu (a program launcher)
 # bindsym $mod+space exec --no-startup-id dmenu_run
+
 bindsym $mod+space exec --no-startup-id rofi -show drun
 
 # change focus
@@ -80,6 +81,9 @@ bindsym $mod+shift+dash split v
 
 # open shutter
 bindsym $mod+Shift+s exec shutter
+
+# open idea
+bindsym $mod+Shift+i exec --no-startup-id ~/Documents/idea-IU-233.13135.103/bin/idea.sh
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
